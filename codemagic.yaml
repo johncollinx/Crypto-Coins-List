@@ -1,9 +1,13 @@
 workflows:
   build-android:
-    name: Build Android APK 
+    name: Build Android APK
     
     environment:
-      flutter: stable
+      flutter: 3.24.3
+      java: 17
+      xcode: latest
+      android:
+        image: latest
 
     scripts:
       - name: Clean and get dependencies
