@@ -1,7 +1,7 @@
 workflows:
   build-android:
     name: Build Android APK 
-    working_directory: Crypto-Coins-List
+    
     environment:
       flutter: stable
 
