@@ -1,21 +1,18 @@
-buildscript {
-    ext.kotlin_version = '1.9.22'
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
 
+buildscript {
     repositories {
         google()
         mavenCentral()
     }
-
     dependencies {
-        // Updated to match Gradle 8.x compatibility
-        classpath 'com.android.tools.build:gradle:8.1.1'
-
-        // FlutterFire / Google services (newer and compatible)
-        classpath 'com.google.gms:google-services:4.4.2'
-
-        // Kotlin plugin matching Kotlin 1.9.22
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // Android Gradle Plugin — make sure this matches your Gradle version
+        classpath 'com.android.tools.build:gradle:8.3.2'
     }
+}
+
+plugins {
+    id "org.jetbrains.kotlin.android" version "1.9.24" apply false
 }
 
 allprojects {
@@ -25,12 +22,17 @@ allprojects {
     }
 }
 
-rootProject.buildDir = '../build'
+rootProject.buildDir = "../build"
+
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
-    project.evaluationDependsOn(':app')
 }
 
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+// Optional cleanup task
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
