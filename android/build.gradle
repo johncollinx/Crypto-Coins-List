@@ -1,13 +1,10 @@
-// Top-level build file for your Flutter Android project.
-
 buildscript {
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        // Compatible Android Gradle Plugin for Flutter 3.22–3.24+
-        classpath "com.android.tools.build:gradle:8.3.2"
+        classpath "com.android.tools.build:gradle:8.3.2"  // matches Flutter 3.35.7
     }
 }
 
