@@ -3,9 +3,9 @@ workflows:
     name: Build Android APK
     
     environment:
-      flutter: 3.24.3
+      flutter: 3.35.7   # <- updated to match flutter_lints requirement
       java: 17
-      xcode: latest  # harmless; Codemagic expects it in schema for completeness
+      xcode: latest
 
     scripts:
       - name: Clean and get dependencies
