@@ -5,9 +5,7 @@ workflows:
     environment:
       flutter: 3.24.3
       java: 17
-      xcode: latest
-      android:
-        image: latest
+      xcode: latest  # harmless; Codemagic expects it in schema for completeness
 
     scripts:
       - name: Clean and get dependencies
