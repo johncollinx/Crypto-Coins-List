@@ -41,7 +41,7 @@ dev_dependencies:
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/svg/bitcoin.svg"
+  image_path: "assets/preview/preview.jpg"
 
 
 
