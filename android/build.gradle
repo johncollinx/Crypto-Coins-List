@@ -1,4 +1,4 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// Top-level build file for your Flutter Android project.
 
 buildscript {
     repositories {
@@ -6,13 +6,9 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        // Android Gradle Plugin — make sure this matches your Gradle version
-        classpath 'com.android.tools.build:gradle:8.3.2'
+        // Compatible Android Gradle Plugin for Flutter 3.22–3.24+
+        classpath "com.android.tools.build:gradle:8.3.2"
     }
-}
-
-plugins {
-    id "org.jetbrains.kotlin.android" version "1.9.24" apply false
 }
 
 allprojects {
@@ -26,13 +22,9 @@ rootProject.buildDir = "../build"
 
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
-
-subprojects {
     project.evaluationDependsOn(":app")
 }
 
-// Optional cleanup task
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
